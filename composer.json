@@ -1,0 +1,53 @@
+{
+    "name": "dasprid/cbor",
+    "description": "A PHP implementation of Concise Binary Object Representation (CBOR)",
+    "type": "library",
+    "require": {
+        "php": "^7.2",
+        "brick/math": "^0.8",
+        "dasprid/enum": "^1.0"
+    },
+    "require-dev": {
+        "ext-json": "^1.6",
+        "phpunit/phpunit": "^7.4",
+        "squizlabs/php_codesniffer": "^2.8"
+    },
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Ben Scholzen 'DASPRiD'",
+            "homepage": "https://dasprids.de/",
+            "email": "mail@dasprids.de"
+        }
+    ],
+    "keywords": [
+        "cbor",
+        "decoder",
+        "encoder",
+        "builder"
+    ],
+    "autoload": {
+        "psr-4": {
+            "DASPRiD\\Cbor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DASPRiD\\CborTest\\": "test/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "check": [
+            "@cs",
+            "@test"
+        ],
+        "coveralls": "coveralls",
+        "cs": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit",
+        "test-coverage": "phpunit --coverage-clover clover.xml"
+    }
+}
